@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Manipulating the DOM</title>
+  <!-- Load Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap" rel="stylesheet">  <!-- Load Styles -->
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+   <!-- HTML Follows BEM naming conventions 
+  IDs are only used for sections to connect menu achors to sections -->
+  <header class="page__header">
+    <nav class="navbar__menu sidenav">
+      <!-- Navigation starts as empty UL that will be populated with JS -->
+      <ul id="navbar__list" class="">
+
+      </ul>
+    </nav>
+  </header>
+  <main>
+  
+    
+    <header class="main__hero">
+      <h1>Landing Page </h1>
+    </header>
+    <!-- Each Section has an ID (used for the anchor) and 
+    a data attribute that will populate the li node.
+    Adding more sections will automatically populate nav.
+    The first section is set to active class by default -->
+    <section id="section1" data-nav="Section 1" class="section your-active-class">
+      <div class="landing__container">
+        <h2>Section 1</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
+
+        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
+      </div>
+    </section>
+    <section id="section2" data-nav="Section 2" class="section">
+      <div class="landing__container">
+        <h2>Section 2</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
+
+        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
+      </div>
+    </section>
+    <section id="section3" data-nav="Section 3" class="section">
+      <div class="landing__container">
+        <h2>Section 3</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
+
+        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
+      </div>
+    </section>
+    
+<section id="section4" data-nav="Section 4" class="section">
+      <div class="landing__container">
+        <h2>Section 1</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
+
+        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
+      </div>
+    </section>
+    
+    
+    
+  </main>
+  <footer class="page__footer">
+    <p>&copy Udacity</p>
+  </footer>
+
+<script>
+const navBar = document.getElementsByClassName("navbar__menu");
+const navbarList = document.getElementById("navbar__list");
+const checkButton = document.getElementsByClassName("checkbtn");
+const sections = document.querySelectorAll("section");
+const news = document.querySelectorAll("a");
+const articles = document.querySelectorAll("section");
+
+for (i = 0; i <= articles.length - 1; i++) {
+// create li element.
+let myli = document.createElement("li");
+// create a (container)
+const aTag = document.createElement("a");
+const data_nav = articles[i].getAttribute("data-nav");
+//alert(data_nav);
+aTag.setAttribute("href","#");
+myli.innerHTML = data_nav;
+aTag.appendChild(myli);
+navbarList.appendChild(aTag);
+}
+
+//add class "active" to sections
+
+/*
+const offset = (section) => {
+return Math.floor(section.getBoundingClientRect().top);
+};
+//remove active class
+const removeActive = (section) => {
+section.classList.remove("your-active-class");
+section.style.cssText = "background-color:#607d8b;";
+
+};
+
+*/
+//adding active class
+
+/*
+const addActive = (conditional, section) => {
+if(conditional){
+section.classList.add("your-active-class");
+section.style.cssText = "background-color:#346beb;";
+};
+};
+
+*/
+/*
+const sectionActivation = () => {
+sections.forEach(section =>{
+const elementOffset = offset(section);
+
+    inviewport = () => elementOffset < 150 && elementOffset >= -150;
+    
+    removeActive(section);
+    addActive(inviewport(),section);
+    
+});
+};
+
+*/
+
+//window.addEventListener("scroll",sectionActivation );
+
+
+
+
+function myFunction(item, index, array) {
+
+  let mysec = sections[index];
+  let mid = sections[index].id
+  document.getElementById(mid).innerHTML = index + ":" + item +  array + "<br>";
+}
+
+
+const links = document.querySelectorAll('.navbar__menu a');
+function doit(target) {
+
+target.target.scrollIntoView();
+  }
+  
+//onClick: doit();
+//links.forEach(myFunction);
+function scrolling(ev) {
+for (var l=0; l < links.length; l++) {
+links[l].prototype= () => {onClick: doit(ev)};
+links[l].prototype();
+break;
+}
+
+};
+
+
+for (var i=0; i < links.length; i++) {
+  links[i].addEventListener("click", helper);
+}
+function helper(ev) {
+  ev.target.addEventListener("click", scrolling(ev));
+}
+//scrolling();
+
+//This is to check when the user is no longer scrolling.
+
+
+</script>
+
+<!--
+
+ (ev, index) => {
+    ev.addEventListener('click', (ev) => {
+        //alert(index + ev.target);
+        let mid = sections[index].id
+        
+        document.getElementById(mid).scrollIntoView();
+        //alert(mid);
+        //let mytarget_section = document.getElementById(mid);
+        //alert(mytarget_section);
+        //sections[index].scrollIntoView(); 
+        //mytarget_section.scrollIntoView();
+        
+        
+        /*
+        for(i = 0; i<sections.length ; i++){
+            let myheader = sections[i].childNodes[1].childNodes[1].textContent
+            alert(myheader);
+            break;
+            //.addEventListener("click", () => { sections[i].scrollIntoView(); }); 
+            
+            
+        }
+        */
+    });
+});
+};
+-->
+</body>
+</html>
