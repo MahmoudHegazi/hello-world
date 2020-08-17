@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+  var div = document.getElementById("myDiv3");
+    var container = document.getElementById("cont");
+    let myul = document.getElementById("demo");
+ var sections = document.querySelectorAll(".section");
+  let fragment = document.createDocumentFragment();
+function myFunction() {
+
+  
+  for (let i=0; i < sections.length; i++) {
+    let newli = document.createElement('li');
+    let txt = document.createTextNode('Section' + i);
+    let att = document.createAttribute("data-section");
+    let att1 = document.createAttribute("data-link");
+    
+    
+    sections[i].setAttributeNode(att);
+    att.value = "section" + i;
+    
+    att1.value = "link" + i;
+    
+    
+    newli.appendChild(txt);
+    
+    fragment.appendChild(newli);
+    
+    newli.addEventListener("click", scrolltoel);
+    
+    
+    
+  }
+  myul.appendChild(fragment);
+ 
+
+}
+
+
+ function scrolltoel(e) {
+  let x = e.target;
+  let getsec = animal.getAttribute("data-section");
+  let getlink = x.getAttribute("data-link");
+  
+  for (var n=0; n < sections.length; n++) {
+    if (getlink == n) {    
+        let mytargettop =  sections[i].offsetTop;
+        var rect = div.getBoundingClientRect();
+        
+  x = rect.left;
+  y = rect.top;
+  w = rect.width;
+  h = rect.height;
+ container.scrollTo(0, );
+  alert ("Left: " + x + ", Top: " + y + ", Width: " + w + ", Height: " + h);
+  
+    }
+  }
+  
+  
+
+}
+
+
+function showDetails(animal) {
+  var animalType = animal.getAttribute("data-animal-type");
+  alert("The " + animal.innerHTML + " is a " + animalType + ".");
+}
+</script>
+</head>
+
+<body>
+<ul id="demo">
+
+</ul>
+<div style="height:200px; width:300px; overflow:auto;" id="cont">
+<div id="myDiv" style="width:250px; height:150px; border:1px solid red;" class="section">
+Return the top-left corner of this element relative to the top left corner of the viewport with the button below.<br>
+Also try to use the scrollbars to test the method for different positions.
+</div>
+
+<div id="myDiv1" style="width:250px; height:150px; border:1px solid red;" class="section">
+Return the top-left corner of this element relative to the top left corner of the viewport with the button below.<br>
+Also try to use the scrollbars to test the method for different positions.
+</div>
+
+<div id="myDiv2" style="width:250px; height:150px; border:1px solid red;" class="section">
+Return the top-left corner of this element relative to the top left corner of the viewport with the button below.<br>
+Also try to use the scrollbars to test the method for different positions.
+</div>
+
+<div id="myDiv3" style="width:250px; height:150px; border:1px solid yellow;" class="section">
+Return the top-left corner of this element relative to the top left corner of the viewport with the button below.<br>
+Also try to use the scrollbars to test the method for different positions.
+</div>
+<div style="width:1000px; height:1000px;"></div>
+</div>
+<br>
+<button onclick="myFunction()">Get top-left corner + witdth and height of the element with red border</button>
+</body>
+</html>
