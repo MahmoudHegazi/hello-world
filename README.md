@@ -1,5 +1,10 @@
 # Welcome to GitHub
 
+## important plugin
+https://owlcarousel2.github.io/OwlCarousel2/demos/stagepadding.html
+https://michalsnik.github.io/aos/
+https://vincentgarreau.com/particles.js/
+
 Welcome to GitHub—where millions of developers work together on software. Ready to get started? Let’s learn how this all works by building and publishing your first GitHub Pages website!
 
 
