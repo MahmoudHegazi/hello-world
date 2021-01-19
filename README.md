@@ -1,5 +1,24 @@
 # Welcome to GitHub
 
+
+# notify_url paypal
+
+
+```
+i have same problem with paypal adaptive payments in my current project. i have given my
+
+notify_url as http://mysite.com/payment-success. In this page, i simply coded
+
+$request = $_POST;
+
+mail('myid@myaccount', $request);
+
+and then i sent the transaction result to my mail to view.
+
+Note, here in my mail i can able to see the transaction results and if i insert into database, it is inserting but i cant see the transaction results in my page. Try sending to your mail the transaction results.
+```
+
+
 ## important plugin
 https://owlcarousel2.github.io/OwlCarousel2/demos/stagepadding.html
 https://michalsnik.github.io/aos/
