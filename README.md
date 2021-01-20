@@ -18,6 +18,14 @@ and then i sent the transaction result to my mail to view.
 Note, here in my mail i can able to see the transaction results and if i insert into database, it is inserting but i cant see the transaction results in my page. Try sending to your mail the transaction results.
 ```
 
+# how to export flask
+```
+export FLASK_APP="flaskr"
+export FLASK_ENV=development
+Run the flask app
+
+flask run
+```
 
 ## important plugin
 https://owlcarousel2.github.io/OwlCarousel2/demos/stagepadding.html
