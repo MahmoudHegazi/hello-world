@@ -4,6 +4,8 @@ https://developer.paypal.com/docs/checkout/integrate/
 # notify_url paypal
 
 
+https://www.godaddy.com/garage/migrating-wordpress/
+
 ```
 i have same problem with paypal adaptive payments in my current project. i have given my
 
