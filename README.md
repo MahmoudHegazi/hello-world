@@ -131,3 +131,13 @@ Want to add even more code and fun styles to your GitHub Pages website? [Follow 
 ## Everything you need to know about GitHub
 
 Getting started is the hardest part. If there’s anything you’d like to know as you get started with GitHub, try searching [GitHub Help](https://help.github.com). Our documentation has tutorials on everything from changing your repository settings to configuring GitHub from your command line.
+
+
+
+#  valid db insert in last project
+
+```
+    drink = Drink(title='awesome drink1', recipe='[{"color": "blue", "name":"h3mleh", "parts":3}]')
+    drink.insert()
+
+```
