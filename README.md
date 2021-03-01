@@ -148,3 +148,12 @@ Getting started is the hardest part. If there’s anything you’d like to know 
 ALTER TABLE `ci`.`ciuser` 
 ADD COLUMN `confirm_token` VARCHAR(500) NOT NULL DEFAULT '0' AFTER `ciphoto`;
 ```
+
+# store datetime in datetime db column
+
+```
+            now = datetime.now()
+            date_string = now.strftime('%Y-%m-%d %H:%M:%S')
+            confirmed_sent = datetime.strptime(
+                date_string, '%Y-%m-%d %H:%M:%S').strftime('%Y-%m-%d %H:%M:%S')
+```
