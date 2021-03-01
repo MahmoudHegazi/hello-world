@@ -141,3 +141,10 @@ Getting started is the hardest part. If there’s anything you’d like to know 
     drink.insert()
 
 ```
+
+# alter table sql
+
+```
+ALTER TABLE `ci`.`ciuser` 
+ADD COLUMN `confirm_token` VARCHAR(500) NOT NULL DEFAULT '0' AFTER `ciphoto`;
+```
