@@ -157,3 +157,12 @@ ADD COLUMN `confirm_token` VARCHAR(500) NOT NULL DEFAULT '0' AFTER `ciphoto`;
             confirmed_sent = datetime.strptime(
                 date_string, '%Y-%m-%d %H:%M:%S').strftime('%Y-%m-%d %H:%M:%S')
 ```
+
+
+# add setting page plugin
+
+```
+add_action('admin_menu', array( $this, 'addPluginAdminMenu' ), 9);    
+```
+
+https://blog.wplauncher.com/create-wordpress-plugin-settings-page/
