@@ -166,3 +166,28 @@ add_action('admin_menu', array( $this, 'addPluginAdminMenu' ), 9);
 ```
 
 https://blog.wplauncher.com/create-wordpress-plugin-settings-page/
+
+
+# async
+
+```
+const zipcode = document.querySelector('#zip');
+const send = document.querySelector('#demo');
+
+const getweather = async () => {
+   
+    const res = await fetch('https://api.openweathermap.org/data/2.5/weather?zip=66614,us&units=metric&appid=db6608063a9d72758e29ea323da07bd1');
+    
+    try {
+    
+       const data = await res.json();
+       alert(data['main']['temp']);
+    
+    } catch (error) {
+      alert(error);
+    }
+}
+
+send.addEventListener('click', getweather);
+
+```
