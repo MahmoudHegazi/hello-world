@@ -1,5 +1,54 @@
 # Welcome to GitHub
 
+# Upload Image On Flask Work ON Any device
+
+PYTHON
+```
+# in this strange project the static folder inside templates so we added template folder statring from the main.py
+UPLOAD_FOLDER = 'templates/static/uploads'
+ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
+
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+
+def allowed_file(filename):
+    return '.' in filename and \
+           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+           
+@main.route('/image_upload', methods=['GET', 'POST'])
+@login_required
+def image_uploader():
+    error = False
+    # main_image_object.save(os.path.join(upload_path, main_image_object.filename))
+    if request.method == 'POST':
+        # check if the post request has the file part
+        if 'main_image' not in request.files:
+            flash('No file part')
+            return redirect(request.url)
+        file = request.files['main_image']
+        # if user does not select file, browser also
+        # submit an empty part without filename
+        if file.filename == '':
+            flash('No selected file')
+            return redirect(request.url)
+        if file and allowed_file(file.filename):
+
+            x = os.path.dirname(__file__)
+            upload_path = os.path.join(x, app.config['UPLOAD_FOLDER'])
+            filename = secure_filename(file.filename)
+            s_path = os.path.join(upload_path, filename).replace('\\', '/')
+            file.save(os.path.join(
+                upload_path, filename).replace('\\', '/'))
+
+            main_image = filename
+    return render_template('check.html')
+    
+    
+```
+HTML
+```
+ <img src="{{url_for('static',filename = 'static/uploads/download.png')}}"  style="height:280px!important;width:60%;">
+```
+
 https://developer.mozilla.org/en-US/docs/Web/API/Window/matchMedia
 
 https://developer.paypal.com/docs/checkout/integrate/
